@@ -212,18 +212,6 @@ GET http://localhost:8000/model/status
    - 检查浏览器控制台是否有404错误
    - 尝试直接在后端URL访问音频文件（例如：http://localhost:8000/generated_music/xxx.wav）
 
-### 调试
-
-开启详细日志:
-```bash
-# 启动服务器时
-uvicorn main:app --reload --log-level debug
-```
-
-## 开发者
-
-这个项目由Barry Wu开发。
-
 ## 许可证
 
 本项目采用MIT许可证。
