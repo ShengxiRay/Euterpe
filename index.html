@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Euterpe - AI音乐生成系统</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+      <div class="container">
+        <a class="navbar-brand" href="#">
+          <i class="fas fa-music me-2"></i>
+          Euterpe
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav me-auto">
+            <li class="nav-item">
+              <a class="nav-link active" href="index.html">首页</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="chatbot.html">AI音乐生成</a>
+            </li>
+          </ul>
+          <div class="d-flex">
+            <button id="theme-toggle" class="btn btn-sm btn-light" title="切换深色/浅色模式">
+              <i class="fas fa-moon"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container py-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8 text-center">
+          <h1 class="display-4 mb-4">Euterpe AI音乐生成系统</h1>
+          <p class="lead mb-5">基于人工智能的音乐创作平台，只需描述您想要的音乐风格、情感或场景，Euterpe将为您创作独特的音乐作品。</p>
+          
+          <div class="d-grid gap-3 d-sm-flex justify-content-sm-center mb-5">
+            <a href="chatbot.html" class="btn btn-primary btn-lg px-4 gap-3">
+              <i class="fas fa-robot me-2"></i> 开始创作音乐
+            </a>
+            <button class="btn btn-outline-secondary btn-lg px-4" id="learnMoreBtn">
+              <i class="fas fa-info-circle me-2"></i> 了解更多
+            </button>
+          </div>
+          
+          <div class="card shadow mb-5">
+            <div class="card-body p-5">
+              <h2 class="card-title mb-4">如何使用</h2>
+              <div class="row g-4">
+                <div class="col-md-4">
+                  <div class="p-3 bg-light rounded-3 h-100">
+                    <i class="fas fa-keyboard fs-1 text-primary mb-3"></i>
+                    <h5>1. 描述您的音乐</h5>
+                    <p class="text-muted">描述您想要的音乐风格、情感、场景或乐器组合</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 bg-light rounded-3 h-100">
+                    <i class="fas fa-cogs fs-1 text-primary mb-3"></i>
+                    <h5>2. AI生成音乐</h5>
+                    <p class="text-muted">我们的AI将根据您的描述生成独特的音乐片段</p>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="p-3 bg-light rounded-3 h-100">
+                    <i class="fas fa-download fs-1 text-primary mb-3"></i>
+                    <h5>3. 保存作品</h5>
+                    <p class="text-muted">您可以试听、下载并保存生成的音乐</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="row mt-5 pt-5 border-top">
+        <div class="col-md-6">
+          <h3>关于Euterpe</h3>
+          <p>Euterpe是希腊神话中的音乐缪斯女神。我们的AI音乐生成系统以其命名，致力于帮助用户轻松创作独特的音乐作品。</p>
+          <p>无论您是专业音乐人寻找新的灵感，还是音乐爱好者想要探索创作，Euterpe都能满足您的需求。</p>
+        </div>
+        <div class="col-md-6">
+          <h3>技术特点</h3>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> 基于先进的AI音乐生成模型</li>
+            <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> 支持多种音乐风格和情感</li>
+            <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> 生成高质量WAV格式音频</li>
+            <li class="list-group-item"><i class="fas fa-check text-success me-2"></i> 简单易用的界面</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    
+    <footer class="bg-dark text-white py-4 mt-5">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-6">
+            <p>2025 Euterpe AI音乐生成系统</p>
+            <p>&copy; Shengxi Lei All Rights Reserved</p>
+          </div>
+          <div class="col-md-6 text-md-end">
+            <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="text-white"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 了解更多模态框 -->
+    <div class="modal fade" id="learnMoreModal" tabindex="-1">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">关于Euterpe AI音乐生成系统</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h4>技术原理</h4>
+            <p>Euterpe使用Facebook的MusicGen大型语言模型，该模型经过数百万音乐样本的训练，能够理解文本描述并将其转化为音乐作品。</p>
+            
+            <h4>特色功能</h4>
+            <ul>
+              <li>文本到音乐的转换</li>
+              <li>多种音乐风格支持</li>
+              <li>历史记录管理</li>
+              <li>高质量音频输出</li>
+            </ul>
+            
+            <h4>示例提示词</h4>
+            <div class="row mb-3">
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5>欢快钢琴曲</h5>
+                    <p class="text-muted">创作一段欢快的钢琴曲，带有轻快的节奏和明亮的旋律</p>
+                    <button class="btn btn-sm btn-outline-primary try-prompt">试用此提示</button>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="card">
+                  <div class="card-body">
+                    <h5>冥想环境音乐</h5>
+                    <p class="text-muted">生成一段适合冥想的环境音乐，包含舒缓的自然声音和缓慢的合成器背景</p>
+                    <button class="btn btn-sm btn-outline-primary try-prompt">试用此提示</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">关闭</button>
+            <a href="chatbot.html" class="btn btn-primary">开始创作</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        // 绑定了解更多按钮
+        const learnMoreBtn = document.getElementById('learnMoreBtn');
+        learnMoreBtn.addEventListener('click', () => {
+          const modal = new bootstrap.Modal(document.getElementById('learnMoreModal'));
+          modal.show();
+        });
+        
+        // 绑定主题切换按钮
+        const themeToggle = document.getElementById('theme-toggle');
+        themeToggle.addEventListener('click', toggleDarkMode);
+        
+        // 从localStorage读取主题设置
+        if (localStorage.getItem('darkMode') === 'true') {
+          document.body.classList.add('dark-mode');
+          themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+        }
+        
+        // 试用提示词按钮
+        document.querySelectorAll('.try-prompt').forEach(button => {
+          button.addEventListener('click', () => {
+            const prompt = button.parentElement.querySelector('p').textContent;
+            localStorage.setItem('pendingPrompt', prompt);
+            window.location.href = 'chatbot.html';
+          });
+        });
+      });
+      
+      // 切换深色模式
+      function toggleDarkMode() {
+        const body = document.body;
+        const themeToggle = document.getElementById('theme-toggle');
+        
+        body.classList.toggle('dark-mode');
+        
+        if (body.classList.contains('dark-mode')) {
+          themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+          localStorage.setItem('darkMode', 'true');
+        } else {
+          themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+          localStorage.setItem('darkMode', 'false');
+        }
+      }
+    </script>
+  </body>
+</html>
+
