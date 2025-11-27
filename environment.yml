@@ -1,0 +1,17 @@
+name: euterpe
+channels:
+  - pytorch
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pytorch
+  - transformers
+  - scipy
+  - fastapi
+  - uvicorn
+  - python-multipart
+  - pip:
+    - openai
+    - safetensors
